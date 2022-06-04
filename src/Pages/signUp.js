@@ -19,7 +19,7 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://bank-firewall.herokuapp.com/api/login", {
+      .post("https://bank-firewall.herokuapp.com/api/register", {
         firstName: sign.firstName,
         lastName: sign.lastName,
         middleName: sign.middleName,
@@ -113,7 +113,7 @@ const SignUp = () => {
                 />
               </div>
             </div>
-            <span>
+            <span className="spann">
               Have an account: <a href="/">Go back to login</a>
             </span>
             <button type="submit">Register</button>

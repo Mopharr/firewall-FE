@@ -98,12 +98,15 @@ label {
     font-size: 10px;
     color: darkred;
 }
-span{
+.spann{
       text-align: center;
     margin: auto;
     width: 100%;
-    color: red;
     margin-bottom: 1em;
+}
+.spann a{
+  color: darkred;
+  text-decoration: none;
 }
 button{
         width: 100%;
@@ -113,6 +116,7 @@ button{
     background: darkred;
     font-size: 20px;
     color: #fff;
+    margin-top: 1em;
     cursor: pointer;
 }
 @media (max-width: 900px) {

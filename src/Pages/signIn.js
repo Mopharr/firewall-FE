@@ -69,8 +69,8 @@ const SignIn = () => {
                 />
               </div>
             </div>
-            <span>
-              You don't have an account: <a href="/">signUp</a>
+            <span className="spann">
+              You don't have an account: <a href="/signup">signUp</a>
             </span>
             <button type="submit">Login</button>
           </form>
