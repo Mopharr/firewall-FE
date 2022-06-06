@@ -2,8 +2,10 @@ import React from "react";
 import "../style/style.css";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate()
   const [sign, setSign] = useState({
     firstName: "",
     lastName: "",
@@ -20,9 +22,9 @@ const SignUp = () => {
     e.preventDefault();
     axios
       .post("https://bank-firewall.herokuapp.com/api/register", {
-        firstName: sign.firstName,
-        lastName: sign.lastName,
-        middleName: sign.middleName,
+        firstname: sign.firstName,
+        lastname: sign.lastName,
+        middlename: sign.middleName,
         email: sign.email,
         password: sign.password,
       })
@@ -34,6 +36,7 @@ const SignUp = () => {
           email: "",
           password: "",
         });
+        navigate('signin')
       })
       .catch((err) => {
         console.log(err);

@@ -2,8 +2,10 @@ import React from "react";
 import { useState } from "react";
 import "../style/style.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const navigate = useNavigate()
   const [sign, setSign] = useState({
     email: "",
     password: "",
@@ -25,6 +27,7 @@ const SignIn = () => {
           email: "",
           password: "",
         });
+        navigate("/dash")
       })
       .catch((err) => {
         console.log(err);
