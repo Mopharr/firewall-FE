@@ -3,9 +3,14 @@ import "../style/style.css";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
+import { BiErrorCircle } from "react-icons/bi";
 
 const SignUp = () => {
   const navigate = useNavigate()
+   const timer = useRef();
+   
+   const [err, setErr] = useState(false);
   const [sign, setSign] = useState({
     firstName: "",
     lastName: "",
@@ -36,10 +41,15 @@ const SignUp = () => {
           email: "",
           password: "",
         });
+        setErr(false);
         navigate('signin')
       })
       .catch((err) => {
         console.log(err);
+        setErr(true);
+        timer.current = window.setTimeout(() => {
+          setErr(false);
+        }, 4000);
       });
   };
 
@@ -49,6 +59,14 @@ const SignUp = () => {
         <img src="yoyo.png" alt="" />
       </div>
       <div className="sign">
+        {err ? (
+          <div className={err ? "none" : "show"}>
+            <p>
+              <BiErrorCircle />
+              An Error just occur
+            </p>
+          </div>
+        ) : null}
         <div className="signn">
           <h2>Welcome </h2>
           <hr />
