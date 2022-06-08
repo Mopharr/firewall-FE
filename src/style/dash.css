@@ -20,6 +20,14 @@
   justify-content: flex-start;
   align-items: center;
 }
+.none{
+  background-color: darkred;
+  padding: 1em 2em;
+  color: #fff;
+}
+.signn {
+    margin-top: 3em;
+}
 .icon {
   /* font-size: 25px; */
   border: 1px solid #fff;

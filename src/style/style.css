@@ -19,9 +19,18 @@
 .sign {
   width: 50%;
   height: 100%;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.none{
+  background-color: darkred;
+  padding: 1em 2em;
+  color: #fff;
+}
+.signn {
+    margin-top: 3em;
 }
 .signn h2 {
   color: #444444;
